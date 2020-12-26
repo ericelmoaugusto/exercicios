@@ -2,6 +2,9 @@ var cambio = Number(prompt('Antes de mais nada. Quanto está a cotação dólar/
 
 function calculo() {
     let real = Number(prompt('Quantos R$ tens na carteira?'))
-    let dolar = (real / cambio).toFixed(2)
-    document.getElementById('msg').innerHTML = `Com ${real} R$ consegues comprar ${dolar} US$.`
+    let dolar = (real / cambio)
+    let rea1 = real.toFixed(2).replace('.', ',')
+    let dol1 = dolar.toFixed(2).replace('.', ',')
+
+    document.getElementById('msg').innerHTML = `Com R$ ${rea1} consegues comprar USD ${dol1} .`
 }
